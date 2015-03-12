@@ -53,8 +53,8 @@
     <div class="container" id="section1">
         <div class="row">
             <div class="small-12" style="padding-top: 200px">
-                <h1>Welcom to CS498KR mp1</h1>
-                <p>by mzhao19@illinois.edu</p>
+                <h1 style="text-shadow: 2px 2px #8a6d3b">Welcome to CS498KR mp1</h1>
+                <p style="text-shadow: #8a6d3b">by mzhao19@illinois.edu</p>
             </div>
         </div>
     </div>
@@ -123,14 +123,14 @@
 
         </div>
     </div>
-    <div class="container" id="video-section">
+    <div class="container show-for-medium-up" id="video-section">
         <video id="video" style="width: 100%" src="https://www.getstudyroom.com/static/world/images/landing/slow-promo-video.m4v" autoplay loop/>
     </div>
     <div class="container">
         <div class="fade" id="section3" >
-            <div class="image"><img src="./elements/ocean.jpg" /> </div>
-            <div class="image"><img src="./elements/lake.jpg" /></div>
-            <div class="image"><img src="./elements/beach.jpg" /></div>
+            <div class="image"><img src="data/elements/ocean.jpg" /> </div>
+            <div class="image"><img src="data/elements/lake.jpg" /></div>
+            <div class="image"><img src="data/elements/beach.jpg" /></div>
         </div>
     </div>
 
@@ -146,7 +146,7 @@
                         </div>
                     </div>
                     <div class="columns small-12 medium-8">
-                        <select onchange="location = 'http://www.google.com/?gws_rd=ssl#q='+this.options[this.selectedIndex].value;">
+                        <select onclick="location = 'http://www.google.com/?gws_rd=ssl#q='+this.options[this.selectedIndex].value;">
                             <option ng-repeat="phone in phones | filter:query" value="{{phone.brand}}">{{phone.brand}}</option>
                         </select>
                     </div>
