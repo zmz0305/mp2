@@ -1,0 +1,38 @@
+<div ng-repeat="phone in phones">
+    <div ng-if="phone.rank==rank">
+        <div ng-if="phone.rank==1">
+            <a href="#/detail/{{phone.rank+1}}">next-></a>
+        </div>
+        <div ng-if="phone.rank==250">
+            <a href="#/detail/{{phone.rank-1}}"><-prev</a>
+        </div>
+        <div ng-if="phone.rank!=1">
+            <div ng-if="phone.rank!=250">
+                <a href="#/detail/{{phone.rank-1}}"><-prev</a>
+                <a href="#/detail/{{phone.rank+1}}">next-></a>
+            </div>
+        </div>
+        <p>
+            <img ng-src="./data/images/{{phone.imdbID}}.jpg"></img>
+        <h3>Title : </h3>{{phone.title}}
+        <h3>Rank : </h3>{{phone.rank}}
+        <h3>Rated : </h3>{{phone.rated}}
+        <h3>Released : </h3>{{phone.released}}
+        <h3>Runtime : </h3>{{phone.runtime}}
+        <h3>Genre : </h3>{{phone.genre}}
+        <h3>Director : </h3>{{phone.director}}
+        <h3>Actors: </h3>{{phone.actors}}
+        <h3>Plot : </h3>{{phone.plot}}
+        <h3>Language : </h3>{{phone.language}}
+        <h3>Country : </h3>{{phone.country}}
+        <h3>Awards : </h3>{{phone.awards}}
+        <h3>Metascore : </h3>{{phone.metascore}}
+        <h3>IMBDRating : </h3>{{phone.imdbRating}}
+        <h3>IMDBVotes : </h3>{{phone.imdbVotes}}
+        <h3>IMBDID : </h3>{{phone.imdbID}}
+        </p>
+    </div>
+
+</div>
+
+<!--<h1>hahahah</h1>-->

@@ -1,0 +1,38 @@
+<div>
+
+    <button ng-click="genre_selected='ALL'">ALL</button>
+    <button ng-click="genre_selected='Action'">Action</button>
+    <button ng-click="genre_selected='Adventure'">Adventure</button>
+    <button ng-click="genre_selected='Crime'">Crime</button>
+    <button ng-click="genre_selected='Comedy'">Comedy</button>
+    <button ng-click="genre_selected='Drama'">Drama</button>
+    <button ng-click="genre_selected='Musical'">Musical</button>
+    <button ng-click="genre_selected='Mystery'">Mystery</button>
+    <button ng-click="genre_selected='Romance'">Romance</button>
+    <button ng-click="genre_selected='Sci-Fi'">Sci-Fi</button>
+    <button ng-click="genre_selected='Thriller'">Thriller</button>
+    <button ng-click="genre_selected='Western'">Western</button>
+    <p>{{genre_selected}}</p>
+    <div class="row" ng-if="genre_selected=='ALL'">
+        <div class="columns small-12 medium-4" ng-repeat="phone in phones">
+            <ul>
+                <li><a href="#/detail/{{phone.rank}}">{{phone.title}}<a></li>
+                <li><img ng-src="./data/images/{{phone.imdbID}}.jpg"> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" ng-if="genre_selected!='ALL'">
+        <div class="columns small-12 medium-4" ng-repeat="phone in phones">
+            <div ng-repeat="genre in phone.genre">
+                <div ng-if="genre==genre_selected">
+                    <ul>
+                        <li><a href="#/detail/{{phone.rank}}">{{phone.title}}<a></li>
+                        <li><img class=" show-hide" ng-src="./data/images/{{phone.imdbID}}.jpg"> </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

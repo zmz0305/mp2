@@ -1,7 +1,20 @@
+//@import url("./foundation/scss/foundation/components/_top-bar");
+@import url("/foundation/scss/foundation/_settings.scss");
+//@import "settings";
+
+
 $orange         : #BD3613;
 $blue           : #2176C7;
-
+$primary-color  : #bdbdbd;
 $font-primary: Merriweather, serif;
 $font-secondary: Bree Serif, serif;
 
 $default-border-radius : 10px;
+
+$sectionpadding: 50px 10px 50px 10px;
+$section-background-odd: rgba(255,255,255,1);
+$section-background-even: rgba(222,222,222,1);
+$section-board-bottom: 1px solid #dbdbdb;
+$general-font: 'Shift', sans-serif;
+$topbar-bg-color: brown;
+$topbar-bg: $topbar-bg-color;

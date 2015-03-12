@@ -1,0 +1,12 @@
+<div>
+    <h1>My favorite movies</h1>
+    <div ng-repeat="f in fav">
+        <div ng-repeat="phone in phones" ng-init="deleted=true">
+            <div ng-if="phone.rank==f" ng-show="deleted">
+                <input type="button" ng-click="deletefav(phone.rank); deleted=false" value="remove from my favorite" ng-model="deleted"><br>
+                <a href="#/detail/{{f}}">{{phone.title}}</title><br>
+                <img src="./data/images/{{phone.imdbID}}.jpg"/>
+            </div>
+        </div>
+    </div>
+</div>

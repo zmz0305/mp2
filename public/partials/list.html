@@ -1,0 +1,35 @@
+<div>
+    <div>
+        Search: <input ng-model="query"><br>
+        Sort by:
+        <select ng-model="orderProp">
+            <option value="title">Alphabetical</option>
+            <option value="rank">Highest to Lowest rank</option>
+            <option value="-rank">Lowest to Highest rank</option>
+            <option value="-title">reverse Alpha</option>
+        </select>
+    </div>
+    <div ng-init="checked=true">
+        <div>
+            <div ng-repeat="f in fav">
+                {{f}}
+            </div>
+        </div>
+        <label>
+            <input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"> show plot
+        </label>
+        <div>
+            <ul>
+                <li class="listing" ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+                    <button ng-click="addfav(phone.rank)">add to favorate</button>
+                    <a href="#/detail/{{phone.rank}}">{{phone.title}}</a><br>
+                    <img src="./data/images/{{phone.imdbID}}.jpg"/>
+                    <p class="check-element show-hide" ng-show="checked" style="clear:both;">{{phone.plot}}</p>
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
